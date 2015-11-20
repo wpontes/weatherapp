@@ -1,0 +1,218 @@
+
+.weather {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.weather__container {
+	@include clearfix();
+	width: 100%;
+	height: 100%;
+}
+
+.weather__today {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 62%;
+	height: 100%;
+	float: left;
+	color: #fff;
+	padding: 0 u(70);
+	background-color: #333;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -0.25em;
+	}
+}
+
+	.weather__today__groupInfo {
+		@include clearfix();
+		width: 100%;
+		display: block;
+	}
+
+		.weather__today__title,
+		.weather__today__city {
+			font-size: u(60);
+			line-height: .8;
+			text-shadow: u(2 3) 0 rgba(0, 0, 0, 0.25);
+		}
+
+		.weather__today__title {
+			font-family: 'latolight';
+			float: left;
+		}
+
+		.weather__today__city {
+			font-family: 'latobold';
+			float: right;
+
+			span { font-family: 'latolight'; }
+		}
+
+	.weather__today__groupClimate {
+		@include clearfix();
+		width: 100%;
+		text-align: center;
+		margin-top: u(80);
+	}
+
+		.weather__today__icon {
+			display: inline-block;
+			vertical-align: middle;
+			margin: u(-20) 0 u(-20) 50%;
+			transform: translateX(-50%) translateZ(0);
+		}
+
+		.weather__today__climate {
+			font-size: u(52);
+			line-height: 1;
+			font-family: 'latolight';
+			display: inline-block;
+			vertical-align: middle;
+			text-shadow: u(2 3) 0 rgba(0, 0, 0, 0.25);
+			width: 100%;
+		}
+
+
+	.weather__today__groupTemperature {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.weather__today__max,
+	.weather__today__min {
+		line-height: .8;
+		font-family: 'latolight';
+		font-size: u(145);
+		text-shadow: u(2 3) 0 rgba(0, 0, 0, 0.25);
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 u(30);
+
+		span {
+			font-size: u(52);
+			text-transform: uppercase;
+			display: block;
+			padding-bottom: u(10);
+			padding-right: u(50);
+		}
+	}
+
+	.weather__today__min { opacity: .6; }
+
+
+.weather__nextDays {
+	width: 38%;
+	height: 100%;
+	float: right;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -0.25em;
+	}
+}
+
+
+.weather__day {
+	width: 80%;
+	margin-top: u(70);
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 1px solid #D6D6D6;
+	padding-bottom: u(70);
+	position: relative;
+
+	&.first { margin-top: 0; }
+
+	&.middle {}
+
+	&.last {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	.climacon_component-stroke {
+		fill: #ddd;
+		stroke: transparent;
+	}
+
+	.climacon_component-fill {
+		fill: #fff;
+		stroke: transparent;
+	}
+}
+
+	.weather__day__header {
+		@include clearfix();
+		padding: 0 u(20 30);
+	}
+
+		.weather__day__title,
+		.weather__day__date {
+			font-size: u(55);
+			line-height: .8;
+			color: #666;
+			font-family: 'latolight';
+		}
+
+		.weather__day__title { float: left; }
+
+		.weather__day__date { float: right; }
+
+	.weather__day__content {
+		@include clearfix();
+		padding: 0 u(20);
+	}
+
+		.weather__day__icon {
+			position: absolute;
+			left: 0;
+			top: u(45);
+			float: left;
+		}
+
+			.weather__day__image {
+				height: u(160);
+			}
+
+		.weather__day__temperature { float: right; }
+
+		.weather__day__min,
+		.weather__day__max {
+			float: left;
+			font-size: u(80);
+			font-family: 'latolight';
+			line-height: 0.8;
+			text-align: center;
+
+			span {
+				display: block;
+				font-size: u(36);
+				text-transform: uppercase;
+				margin-right: u(28);
+				margin-bottom: u(12);
+			}
+		}
+
+		.weather__day__max {
+			color: #ff6666;
+			padding-right: u(26);
+		}
+
+		.weather__day__min {
+			color: #3399ff;
+			border-left: 1px solid #D6D6D6;
+			padding-left: u(26);
+		}
