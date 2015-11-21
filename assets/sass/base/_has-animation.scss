@@ -136,7 +136,7 @@
 @mixin verticalStyleAnimation() {
 
 	.weather__today {
-		.has-animation & { margin-top: -58%; }
+		.has-animation & { margin-top: -55%; }
 
 		.has-animation.load & {
 			-webkit-transform: translateZ(0);
@@ -148,7 +148,7 @@
 
 
 	.weather__nextDays {
-		.has-animation & { margin-bottom: -42%; }
+		.has-animation & { margin-bottom: -45%; }
 
 		.has-animation.load & {
 			-webkit-transform: translateZ(0);
