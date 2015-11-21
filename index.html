@@ -28,6 +28,8 @@
 
 		function _setHtmlScale(m) {
 
+			alert(m.media);
+
 			if(m.matches || $('body').hasClass('vertical')) {
 				var scale = 1 + scaleFactor * ($html.height() - defaultWidth) / defaultWidth;
 			} else {
